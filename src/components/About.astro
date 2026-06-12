@@ -1,9 +1,48 @@
 ---
 const skills = [
-  { category: "Languages", items: ["Python", "C", "Rust", "JavaScript", "TypeScript", "Kotlin", "Shell"] },
-  { category: "Frameworks", items: ["SvelteKit", "Next.js", "Astro", "Tauri", "GTK4", "Qt6"] },
-  { category: "Infrastructure", items: ["Docker", "PostgreSQL", "Redis", "MinIO", "Nginx", "SQLite"] },
-  { category: "Environment", items: ["Arch Linux", "KDE Plasma", "Neovim", "Git"] },
+  {
+    category: "Languages",
+    items: [
+      { name: "Python", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2 0-3 1-3 3v2H6c-1 0-2 1-2 2v7c0 1 1 2 2 2h12c1 0 2-1 2-2v-7c0-1-1-2-2-2h-3V5c0-2-1-3-3-3z" fill="#3776ab"/><path d="M9 5v2h6V5c0-1-.5-1.5-1.5-1.5h-3C9.5 3.5 9 4 9 5z" fill="#ffd43b"/></svg>' },
+      { name: "C", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="#A8B9CC" stroke-width="1.5"/><path d="M9 8c-1.5 0-2.5 1-2.5 2v4c0 1 1 2 2.5 2" stroke="#5C8DDE" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>' },
+      { name: "Rust", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="#CE422B" stroke-width="1.5"/><path d="M12 6L8 9l1 3L12 14l3-2 1-3L12 6z" fill="#CE422B"/></svg>' },
+      { name: "JavaScript", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" fill="#F7DF1E" rx="1"/><text x="9" y="17" font-size="10" font-weight="bold" fill="#000">JS</text></svg>' },
+      { name: "TypeScript", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" fill="#3178C6" rx="1"/><text x="9" y="17" font-size="8" font-weight="bold" fill="#fff">TS</text></svg>' },
+      { name: "Kotlin", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z" fill="#7F52FF"/></svg>' },
+      { name: "Shell", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 12l4-4m0 8l-4-4M7 8l4 4-4 4m4-4h6" stroke="#4EAA25" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' }
+    ]
+  },
+  {
+    category: "Frameworks",
+    items: [
+      { name: "SvelteKit", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 4L6 12l12 8V4z" fill="#FF3E00"/><path d="M6 12L18 4v16L6 12z" fill="#FF3E00" opacity="0.2"/></svg>' },
+      { name: "Next.js", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#000" stroke-width="1"/><path d="M8 8h8M8 16h4M16 16V8" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>' },
+      { name: "Astro", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l9 18H3L12 2z" fill="#FF5D01"/><circle cx="12" cy="14" r="1.5" fill="#fff"/></svg>' },
+      { name: "Tauri", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h9v9H3zM12 3h9v9h-9zM3 12h9v9H3zM12 12h9v9h-9z" fill="#FFC131" opacity="0.7"/><path d="M12 3h9v9h-9z" fill="#24C8DB"/></svg>' },
+      { name: "GTK4", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="7" r="3" fill="#EF6C00"/><circle cx="17" cy="7" r="3" fill="#00BCD4"/><circle cx="12" cy="15" r="3" fill="#4CAF50"/></svg>' },
+      { name: "Qt6", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="6" height="6" fill="#41CD52"/><rect x="11" y="3" width="6" height="6" fill="#41CD52" opacity="0.6"/><rect x="3" y="11" width="6" height="6" fill="#41CD52" opacity="0.6"/><rect x="11" y="11" width="6" height="6" fill="#41CD52" opacity="0.3"/></svg>' }
+    ]
+  },
+  {
+    category: "Infrastructure",
+    items: [
+      { name: "Docker", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l1-2h2l-1 2m5-3l1-2h2l-1 2m5 0l1-2h2l-1 2M3 15l1-2h2l-1 2m5 0l1-2h2l-1 2M3 8h16v4H3z" fill="#2496ED"/></svg>' },
+      { name: "PostgreSQL", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8" fill="none" stroke="#336791" stroke-width="1.5"/><path d="M12 5v14M5 12h14" stroke="#336791" stroke-width="1"/></svg>' },
+      { name: "Redis", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10l6 2v4l-6-2v-4zm9-3l6 2v4l-6 2v-4zM3 17l6 2v-4l-6-2v4z" fill="#DC382D"/></svg>' },
+      { name: "MinIO", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="4" height="4" fill="#C41E3A"/><rect x="9" y="3" width="4" height="4" fill="#C41E3A"/><rect x="15" y="3" width="4" height="4" fill="#C41E3A" opacity="0.5"/><rect x="3" y="9" width="4" height="4" fill="#C41E3A" opacity="0.5"/><rect x="9" y="9" width="4" height="4" fill="#C41E3A" opacity="0.3"/></svg>' },
+      { name: "Nginx", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><text x="4" y="18" font-size="16" font-weight="bold" fill="#009639">N</text><path d="M8 8l4 6 4-6" stroke="#009639" stroke-width="1" fill="none" stroke-linecap="round"/></svg>' },
+      { name: "SQLite", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="7" fill="none" stroke="#003B57" stroke-width="1.5"/><path d="M9 12c0 1.66 1.34 3 3 3s3-1.34 3-3" stroke="#4FD1F1" stroke-width="1.5" fill="none"/></svg>' }
+    ]
+  },
+  {
+    category: "Environment",
+    items: [
+      { name: "Arch Linux", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 20h16L12 2z" fill="none" stroke="#1793D1" stroke-width="1.5"/><path d="M12 4L6 18M12 4L18 18M8 14h8" stroke="#1793D1" stroke-width="1" opacity="0.7"/></svg>' },
+      { name: "KDE Plasma", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2" fill="#3DAEE9"/><circle cx="12" cy="5" r="1.5" fill="#3DAEE9" opacity="0.5"/><circle cx="19" cy="12" r="1.5" fill="#3DAEE9" opacity="0.5"/><circle cx="12" cy="19" r="1.5" fill="#3DAEE9" opacity="0.5"/><circle cx="5" cy="12" r="1.5" fill="#3DAEE9" opacity="0.5"/></svg>' },
+      { name: "Neovim", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8" fill="none" stroke="#57B39B" stroke-width="1.5"/><path d="M8 8l8 8M8 16l8-8" stroke="#57B39B" stroke-width="1.5" stroke-linecap="round"/></svg>' },
+      { name: "Git", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="11" cy="5" r="1.5" fill="#F1502F"/><circle cx="18" cy="12" r="1.5" fill="#F1502F"/><circle cx="11" cy="19" r="1.5" fill="#F1502F"/><circle cx="4" cy="12" r="1.5" fill="#F1502F"/><line x1="11" y1="6.5" x2="18" y2="11" stroke="#F1502F" stroke-width="1"/><line x1="17" y1="13" x2="12" y2="18" stroke="#F1502F" stroke-width="1"/><line x1="10" y1="18" x2="5" y2="13" stroke="#F1502F" stroke-width="1"/><line x1="5" y1="11" x2="11" y2="6" stroke="#F1502F" stroke-width="1"/></svg>' }
+    ]
+  }
 ];
 ---
 
@@ -38,7 +77,12 @@ const skills = [
         <div class="skill-group">
           <span class="skill-category mono">{group.category}</span>
           <div class="skill-items">
-            {group.items.map(item => <span class="skill-item">{item}</span>)}
+            {group.items.map(item => (
+              <div class="skill-item-wrapper">
+                <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" set:html={item.icon} />
+                <span class="skill-item">{typeof item === 'string' ? item : item.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       ))}
@@ -49,7 +93,7 @@ const skills = [
 <style>
   #about {
     padding: clamp(5rem, 12vh, 10rem) clamp(1.5rem, 5vw, 4rem);
-    border-top: 1px solid var(--grey-900);
+    border-top: 1px solid var(--border);
   }
 
   .section-header {
@@ -61,7 +105,7 @@ const skills = [
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-500);
+    color: var(--text-muted);
   }
 
   .about-grid {
@@ -83,7 +127,7 @@ const skills = [
   .bio-body {
     font-size: 1rem;
     line-height: 1.75;
-    color: var(--grey-300);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
   }
 
@@ -97,14 +141,14 @@ const skills = [
     font-size: 0.8rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--white);
-    border-bottom: 1px solid var(--grey-700);
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
     padding-bottom: 2px;
     transition: border-color 0.15s, color 0.15s;
   }
 
   .bio-link:hover {
-    border-color: var(--white);
+    border-color: var(--text);
   }
 
   .about-skills {
@@ -123,26 +167,46 @@ const skills = [
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-500);
+    color: var(--text-muted);
   }
 
   .skill-items {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .skill-item-wrapper {
+    display: flex;
+    align-items: center;
     gap: 0.4rem;
+    padding: 0.4rem 0.65rem;
+    background: var(--border-subtle);
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .skill-item-wrapper:hover {
+    background: var(--text-secondary);
+  }
+
+  .skill-icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+
+  .skill-item-wrapper:hover .skill-icon {
+    opacity: 1;
   }
 
   .skill-item {
     font-size: 0.9rem;
     font-weight: 500;
-    background: var(--grey-900);
-    padding: 0.3rem 0.65rem;
-    transition: background 0.15s, color 0.15s;
-  }
-
-  .skill-item:hover {
-    background: var(--white);
-    color: var(--black);
+    color: var(--text);
+    white-space: nowrap;
   }
 
   @media (max-width: 768px) {

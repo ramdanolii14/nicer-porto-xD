@@ -27,6 +27,10 @@ const {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <ViewTransitions />
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
 </head>
 <body>
   <slot />
@@ -54,17 +58,43 @@ const {
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
     --nav-height: 60px;
+
+    /* Light mode (default) */
+    --bg: #ffffff;
+    --text: #000000;
+    --text-muted: #666666;
+    --text-secondary: #999999;
+    --border: #e0e0e0;
+    --border-subtle: #f0f0f0;
+    --accent: #007acc;
+    --scrollbar-track: #f5f5f5;
+    --scrollbar-thumb: #d0d0d0;
+    --nav-bg: rgba(255, 255, 255, 0.92);
+  }
+
+  html[data-theme="dark"] {
+    --bg: #000000;
+    --text: #ffffff;
+    --text-muted: #9a9a9a;
+    --text-secondary: #666666;
+    --border: #333333;
+    --border-subtle: #1a1a1a;
+    --accent: #0ea5e9;
+    --scrollbar-track: #000000;
+    --scrollbar-thumb: #333333;
+    --nav-bg: rgba(0, 0, 0, 0.92);
   }
 
   html {
     font-size: 17px;
-    background: var(--black);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--text);
     font-family: var(--font-body);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   body {
@@ -112,6 +142,6 @@ const {
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--black); }
-  ::-webkit-scrollbar-thumb { background: var(--grey-700); }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); }
 </style>

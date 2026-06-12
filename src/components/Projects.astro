@@ -65,7 +65,7 @@ const projects = [
 <style>
   #projects {
     padding: clamp(5rem, 12vh, 10rem) clamp(1.5rem, 5vw, 4rem);
-    border-top: 1px solid var(--grey-900);
+    border-top: 1px solid var(--border);
   }
 
   .section-header {
@@ -77,14 +77,14 @@ const projects = [
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-500);
+    color: var(--text-muted);
   }
 
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
     gap: 1px;
-    border: 1px solid var(--grey-900);
+    border: 1px solid var(--border);
   }
 
   .project-card {
@@ -93,28 +93,29 @@ const projects = [
     gap: 0.75rem;
     padding: 2rem;
     border: none;
-    background: var(--black);
+    background: var(--border-subtle);
+    color: var(--text);
     cursor: pointer;
     transition: background 0.15s, color 0.15s;
     outline-offset: -2px;
   }
 
   .project-card:hover {
-    background: var(--white);
-    color: var(--black);
+    background: var(--text);
+    color: var(--bg);
   }
 
   .project-card:hover .project-desc {
-    color: var(--grey-700);
+    color: var(--text-secondary);
   }
 
   .project-card:hover .project-year {
-    color: var(--grey-700);
+    color: var(--text-secondary);
   }
 
   .project-card:hover .tag {
-    border-color: var(--grey-300);
-    color: var(--grey-700);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
   }
 
   .card-top {
@@ -125,7 +126,7 @@ const projects = [
 
   .project-year {
     font-size: 0.8125rem;
-    color: var(--grey-500);
+    color: var(--text-muted);
     transition: color 0.15s;
   }
 
@@ -148,7 +149,7 @@ const projects = [
   .project-desc {
     font-size: 0.9375rem;
     line-height: 1.65;
-    color: var(--grey-500);
+    color: var(--text-secondary);
     flex: 1;
     transition: color 0.15s;
   }
@@ -164,7 +165,8 @@ const projects = [
     font-size: 0.8125rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    border: 1px solid var(--grey-700);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
     padding: 0.2rem 0.5rem;
     transition: border-color 0.15s, color 0.15s;
   }

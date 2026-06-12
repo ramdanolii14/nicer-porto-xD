@@ -116,14 +116,7 @@ const total = allPhotos.length;
 <style>
   #gallery {
     padding: clamp(5rem, 12vh, 10rem) clamp(1.5rem, 5vw, 4rem);
-    border-top: 1px solid var(--grey-900);
-  }
-
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2.5rem;
+    border-top: 1px solid var(--border);
   }
 
   .label {
@@ -131,13 +124,13 @@ const total = allPhotos.length;
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-500);
+    color: var(--text-muted);
   }
 
   .count {
     font-size: 0.8125rem;
     letter-spacing: 0.04em;
-    color: var(--grey-700);
+    color: var(--text-secondary);
   }
 
   /* Filter bar */
@@ -157,8 +150,8 @@ const total = allPhotos.length;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     background: transparent;
-    color: var(--grey-500);
-    border: 1px solid var(--grey-700);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
     padding: 0.35rem 0.75rem;
     cursor: pointer;
     transition: all 0.15s;
@@ -166,25 +159,25 @@ const total = allPhotos.length;
   }
 
   .filter-btn:hover {
-    color: var(--white);
-    border-color: var(--grey-300);
+    color: var(--text);
+    border-color: var(--text-secondary);
   }
 
   .filter-btn.active {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
   }
 
   .filter-btn.active .pill {
-    background: var(--black);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--text);
   }
 
   .pill {
     font-size: 0.75rem;
-    background: var(--grey-900);
-    color: var(--grey-500);
+    background: var(--border-subtle);
+    color: var(--text-muted);
     padding: 0.1rem 0.35rem;
     border-radius: 2px;
     transition: all 0.15s;
@@ -204,7 +197,7 @@ const total = allPhotos.length;
     margin-bottom: 1px;
     position: relative;
     overflow: hidden;
-    background: var(--grey-900);
+    background: var(--border-subtle);
     border: none;
     padding: 0;
     cursor: pointer;
@@ -212,7 +205,7 @@ const total = allPhotos.length;
   }
 
   .gallery-item:focus-visible {
-    outline: 2px solid var(--white);
+    outline: 2px solid var(--text);
     outline-offset: 2px;
   }
 
@@ -256,14 +249,14 @@ const total = allPhotos.length;
     font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-300);
+    color: var(--text-secondary);
     margin-bottom: 0.2rem;
   }
 
   .overlay-name {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--white);
+    color: var(--text);
     font-family: var(--font-body);
     white-space: nowrap;
     overflow: hidden;
@@ -274,7 +267,7 @@ const total = allPhotos.length;
   .empty-state {
     padding: 5rem 0;
     text-align: center;
-    color: var(--grey-700);
+    color: var(--text-secondary);
     font-size: 0.8rem;
     letter-spacing: 0.05em;
   }
@@ -348,18 +341,18 @@ const total = allPhotos.length;
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--grey-500);
+    color: var(--text-muted);
   }
 
   .lb-name {
     font-size: 0.9375rem;
-    color: var(--grey-300);
+    color: var(--text-secondary);
     flex: 1;
   }
 
   .lb-counter {
     font-size: 0.8125rem;
-    color: var(--grey-700);
+    color: var(--text-secondary);
     letter-spacing: 0.04em;
     margin-left: auto;
   }
@@ -371,8 +364,8 @@ const total = allPhotos.length;
     right: 1.5rem;
     z-index: 202;
     background: transparent;
-    border: 1px solid var(--grey-700);
-    color: var(--grey-300);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -385,9 +378,9 @@ const total = allPhotos.length;
   }
 
   .lb-close:hover {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
   }
 
   .lb-nav {
@@ -396,8 +389,8 @@ const total = allPhotos.length;
     transform: translateY(-50%);
     z-index: 202;
     background: transparent;
-    border: 1px solid var(--grey-700);
-    color: var(--grey-300);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
     width: 2.75rem;
     height: 2.75rem;
     display: flex;
@@ -409,9 +402,9 @@ const total = allPhotos.length;
   }
 
   .lb-nav:hover {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
   }
 
   .lb-prev { left: 1.5rem; }
