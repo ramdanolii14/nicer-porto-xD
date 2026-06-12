@@ -218,4 +218,66 @@ const skills = [
       gap: 2.5rem;
     }
   }
+
+  @media (max-width: 480px) {
+    #about {
+      padding: clamp(3rem, 8vh, 6rem) 1rem;
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .bio-lead {
+      font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+      margin-bottom: 1rem;
+    }
+
+    .bio-body {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+    }
+
+    .bio-links {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .bio-link {
+      padding-bottom: 0;
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+    }
+
+    .about-skills {
+      gap: 1.25rem;
+    }
+
+    .skill-group {
+      gap: 0.5rem;
+    }
+
+    .skill-items {
+      gap: 0.6rem;
+    }
+
+    .skill-item-wrapper {
+      padding: 0.35rem 0.55rem;
+      border-radius: 3px;
+      min-height: 36px;
+      align-items: center;
+    }
+
+    .skill-item {
+      font-size: 0.85rem;
+    }
+
+    .skill-icon {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
 </style>

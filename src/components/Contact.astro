@@ -128,4 +128,85 @@ const links = [
     letter-spacing: 0.02em;
     color: var(--text-secondary);
   }
+
+  @media (max-width: 768px) {
+    #contact {
+      padding: clamp(4rem, 10vh, 8rem) 1rem 0;
+    }
+
+    .contact-body {
+      margin-bottom: 3rem;
+    }
+
+    .contact-headline {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+
+    .contact-sub {
+      font-size: 1rem;
+    }
+
+    .email-cta {
+      font-size: clamp(0.95rem, 2vw, 1.25rem);
+      min-height: 44px;
+      align-items: center;
+    }
+
+    footer {
+      padding: 1.5rem 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .footer-link {
+      display: block;
+      padding: 0.5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #contact {
+      padding: clamp(2.5rem, 6vh, 5rem) 1rem 0;
+    }
+
+    .contact-headline {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+    }
+
+    .contact-sub {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .email-cta {
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      flex-wrap: wrap;
+    }
+
+    .email-cta svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 0;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      width: 100%;
+      order: 2;
+      margin-top: 1rem;
+    }
+  }
 </style>
