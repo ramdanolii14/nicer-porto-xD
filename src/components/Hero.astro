@@ -11,8 +11,8 @@
 
 <div class="name-and-pic">
 <h1 class="hero-name">Ramdan Olii</h1>
-  <img src="/profile-light.jpg" alt="Ramdan Olii Profile Picture" class="profile-pic profile-pic-light" />
-  <img src="/profile-dark.jpg" alt="Ramdan Olii Profile Picture" class="profile-pic profile-pic-dark" />
+  <img src="/profile-light.jpg" alt="Ramdan Olii" class="profile-pic profile-pic-light" />
+  <img src="/profile-dark.jpg" alt="Ramdan Olii" class="profile-pic profile-pic-dark" />
 </div>
 
     <p class="hero-tagline">
@@ -97,19 +97,20 @@
   }
 
   .profile-pic {
-    width: clamp(60px, 15vw, 120px);
-    height: clamp(60px, 15vw, 120px);
-    border-radius: 50%;
+    width: clamp(120px, 25vw, 280px);
+    height: clamp(120px, 25vw, 280px);
+    border-radius: 0;
     object-fit: cover;
-    border: 3px solid var(--accent);
   }
 
   .profile-pic-light {
     display: block;
+    border: 3px solid #000000;
   }
 
   .profile-pic-dark {
     display: none;
+    border: 3px solid #ffffff;
   }
 
   html[data-theme="dark"] .profile-pic-light {
