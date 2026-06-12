@@ -1,0 +1,178 @@
+---
+const projects = [
+  {
+    name: "WhatsApp Ultra Fast",
+    description: "Lightweight WhatsApp Web client for Linux. Built with Tauri 2 + Rust + WebKit2GTK. Published on AUR.",
+    tags: ["Rust", "Tauri", "GTK", "Linux"],
+    url: "https://github.com/ramdanolii14",
+    year: "2024",
+  },
+  {
+    name: "DDRIVE",
+    description: "Self-hosted file storage using Discord channels as a backend. Multi-bot pool for rate-limit management.",
+    tags: ["Node.js", "Discord API", "Storage"],
+    url: "https://github.com/ramdanolii14",
+    year: "2025",
+  },
+  {
+    name: "Drivepool",
+    description: "Multi-account Google Drive dashboard. Built with Next.js 14 App Router, better-sqlite3, and googleapis.",
+    tags: ["Next.js", "Google API", "SQLite"],
+    url: "https://github.com/ramdanolii14",
+    year: "2024",
+  },
+  {
+    name: "IDR Spectrum Player",
+    description: "GTK4/Python music player with real-time spectrum visualization styled as an IDR/USD exchange rate chart.",
+    tags: ["Python", "GTK4", "Audio"],
+    url: "https://github.com/ramdanolii14/Rplayer",
+    year: "2024",
+  },
+  {
+    name: "RaisaBrowser",
+    description: "Custom web browser built in C++ with Qt6 WebEngine. Multi-file codebase, download GUI, infinite-scroll handling.",
+    tags: ["C++", "Qt6", "WebEngine"],
+    url: "https://github.com/ramdanolii14",
+    year: "2024",
+  },
+  {
+    name: "Rugplay",
+    description: "SvelteKit trading simulation game deployed on VPS with Docker, PostgreSQL, Redis, and MinIO storage.",
+    tags: ["SvelteKit", "Docker", "PostgreSQL"],
+    url: "https://rugplay.ramdanolii.my.id",
+    year: "2025",
+  },
+];
+---
+
+<section id="projects">
+  <div class="section-header">
+    <span class="mono label">Selected Work</span>
+  </div>
+
+  <div class="projects-grid">
+    {projects.map((p) => (
+      <a href={p.url} target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="card-top">
+          <span class="project-year mono">{p.year}</span>
+          <svg class="arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 15L15 3M15 3H7M15 3v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="project-name">{p.name}</h3>
+        <p class="project-desc">{p.description}</p>
+        <div class="project-tags">
+          {p.tags.map(t => <span class="tag mono">{t}</span>)}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  #projects {
+    padding: clamp(5rem, 12vh, 10rem) clamp(1.5rem, 5vw, 4rem);
+    border-top: 1px solid var(--grey-900);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey-500);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: 1px;
+    border: 1px solid var(--grey-900);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 2rem;
+    border: none;
+    background: var(--black);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    outline-offset: -2px;
+  }
+
+  .project-card:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+
+  .project-card:hover .project-desc {
+    color: var(--grey-700);
+  }
+
+  .project-card:hover .project-year {
+    color: var(--grey-700);
+  }
+
+  .project-card:hover .tag {
+    border-color: var(--grey-300);
+    color: var(--grey-700);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-year {
+    font-size: 0.8125rem;
+    color: var(--grey-500);
+    transition: color 0.15s;
+  }
+
+  .arrow {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .project-card:hover .arrow {
+    transform: translate(3px, -3px);
+  }
+
+  .project-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .project-desc {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--grey-500);
+    flex: 1;
+    transition: color 0.15s;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid var(--grey-700);
+    padding: 0.2rem 0.5rem;
+    transition: border-color 0.15s, color 0.15s;
+  }
+</style>

@@ -1,0 +1,131 @@
+---
+const links = [
+  { label: "GitHub", href: "https://github.com/ramdanolii14" },
+  { label: "Portfolio", href: "https://ramdanolii.my.id" },
+  { label: "Blog", href: "https://blog.ramdanolii.my.id" },
+];
+---
+
+<section id="contact">
+  <div class="section-header">
+    <span class="mono label">Contact</span>
+  </div>
+
+  <div class="contact-body">
+    <h2 class="contact-headline">Let's build something.</h2>
+    <p class="contact-sub">
+      Open to collaboration, OSS contributions, and project discussions.
+    </p>
+    <a href="mailto:hello@ramdanolii.my.id" class="email-cta">
+      hello@ramdanolii.my.id
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 16L16 4M16 4H8M16 4v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      {links.map(l => (
+        <a href={l.href} target="_blank" rel="noopener noreferrer" class="footer-link mono">
+          {l.label}
+        </a>
+      ))}
+    </div>
+    <span class="footer-copy mono">© {new Date().getFullYear()} Ramdan Olii</span>
+  </footer>
+</section>
+
+<style>
+  #contact {
+    padding: clamp(5rem, 12vh, 10rem) clamp(1.5rem, 5vw, 4rem) 0;
+    border-top: 1px solid var(--grey-900);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey-500);
+  }
+
+  .contact-body {
+    margin-bottom: 5rem;
+  }
+
+  .contact-headline {
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    font-weight: 700;
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-sub {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--grey-500);
+    margin-bottom: 2.5rem;
+  }
+
+  .email-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    border-bottom: 1.5px solid var(--grey-700);
+    padding-bottom: 4px;
+    transition: border-color 0.15s, gap 0.2s;
+  }
+
+  .email-cta:hover {
+    border-color: var(--white);
+    gap: 0.9rem;
+  }
+
+  .email-cta svg {
+    transition: transform 0.2s;
+  }
+
+  .email-cta:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  footer {
+    border-top: 1px solid var(--grey-900);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-link {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--grey-500);
+    transition: color 0.15s;
+  }
+
+  .footer-link:hover { color: var(--white); }
+
+  .footer-copy {
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    color: var(--grey-700);
+  }
+</style>
