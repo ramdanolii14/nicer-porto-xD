@@ -12,10 +12,11 @@ type ImageModule = { default: ImageMetadata };
 // ─────────────────────────────────────────────────────────────────
 
 const rawCategories: Record<string, Record<string, ImageModule>> = {
-  'Event':   import.meta.glob<ImageModule>('/src/gallery/event/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',   { eager: true }),
+  'Personal':    import.meta.glob<ImageModule>('/src/gallery/personal/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',    { eager: true }),
+  'School':   import.meta.glob<ImageModule>('/src/gallery/school/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',   { eager: true }),
   'Kampus':  import.meta.glob<ImageModule>('/src/gallery/kampus/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',  { eager: true }),
   'Hobi':    import.meta.glob<ImageModule>('/src/gallery/hobi/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',    { eager: true }),
-  'My Fav Coser': import.meta.glob<ImageModule>('/src/gallery/cosplay/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true }),
+  'My Fav Coser':    import.meta.glob<ImageModule>('/src/gallery/cosplay/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',    { eager: true }),
 };
 
 interface Photo {
